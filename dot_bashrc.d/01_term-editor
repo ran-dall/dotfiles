@@ -1,0 +1,8 @@
+# $EDITOR configuration
+if hash micro 2> /dev/null; then # Set EDITOR to micro, if it's installed
+    export EDITOR="micro"
+elif hash ne 2> /dev/null; then # Set EDITOR to ne, if it's installed
+    export EDITOR="ne"
+else # Set EDITOR to vim
+    export EDITOR="vim"
+fi

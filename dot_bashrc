@@ -1,0 +1,6 @@
+# Source files from .bashrc.d
+for file in "$HOME"/.bashrc.d/*; do
+    if [ -r $file ]; then
+        . $file
+    fi
+done

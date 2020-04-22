@@ -1,0 +1,10 @@
+# $VISUAL configuration
+if hash subl 2> /dev/null; then # Set VISUAL to Sublime, if it's installed
+    export VISUAL="subl"
+elif hash ne 2> /dev/null; then # Set VISUAL to Atom, if it's installed
+    export VISUAL="atom"
+elif hash mvim 2> /dev/null; then # Set VISUAL to MacVim, if it's installed
+    export VISUAL="mvim"
+else # Set VISUAL to EDITOR
+    export VISUAL="$EDITOR"
+fi

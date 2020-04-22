@@ -1,0 +1,3 @@
+# Bash history configuration
+HISTCONTROL=ignoreboth # Ignore commands in history that start with white space and that are duplicates
+HISTIGNORE="history*"  # Ignore "history*" commands in history

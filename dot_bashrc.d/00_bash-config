@@ -1,0 +1,2 @@
+# User Bash configuration
+export CLICOLOR=1 # Enable Terminal color
