@@ -1,0 +1,25 @@
+# Homebrew configuration
+#
+# Add Homebrew's'/usr/local/sbin to $PATH
+export PATH="/usr/local/sbin:$PATH"
+
+# Set Hombrew Editor to Atom
+if hash atom 2> /dev/null; then
+    export HOMEBREW_EDITOR="atom --wait"
+elif hash subl 2> /dev/null; then
+    export HOMEBREW_EDITOR="subl --wait"
+else
+    export HOMEBREW_EDITOR=vim
+fi
+
+# Set Homebrew Brewfile
+export HOMEBREW_BREWFILE="$HOME"/.dotfile/Brewfile
+
+# Set Homebrew bash-completion
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+
+# Homebrew - Command Not Found - Reproduces Ubuntu’s command-not-found for Homebrew users on macOS.
+# https://github.com/Homebrew/homebrew-command-not-found
+if brew command command-not-found-init > /dev/null; then
+    eval "$(brew command-not-found-init)"
+fi

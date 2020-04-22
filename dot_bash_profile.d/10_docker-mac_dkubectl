@@ -1,0 +1,4 @@
+# Docker Desktop for Mac configuration
+#
+# Set alias for the Kubernetes component of Docker
+alias dkubectl="/Applications/Docker.app/Contents/Resources/bin/kubectl"

@@ -1,0 +1,6 @@
+# asdf Homebrew Installation Quirks
+#
+. $(brew --prefix asdf)/asdf.sh
+#
+# Enable asdf completions
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash

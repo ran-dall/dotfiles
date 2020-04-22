@@ -1,0 +1,9 @@
+# Source User's .bashrc file
+[ -r "$HOME/.bashrc" ] && . "$HOME/.bashrc"
+
+# Source files from .bash_profile.d
+for file in "$HOME"/.bash_profile.d/*; do
+    if [ -r $file ]; then
+        . $file
+    fi
+done

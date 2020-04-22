@@ -1,0 +1,11 @@
+# Google Cloud SDK (via Homewbrew) configuration
+#
+# Export Google Cloud configuration directory
+export CLOUDSDK_CONFIG="$HOME"/.config/gcloud
+
+# Set Google Cloud SDK's path and completion feature
+source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+
+# Set alias for the Kubernetes component of the Google Cloud SDK
+alias gkubectl="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/kubectl"
