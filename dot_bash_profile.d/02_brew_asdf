@@ -4,3 +4,7 @@
 #
 # Enable asdf completions
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+#
+# Set JAVA_HOME for asdf Java plugin
+JAVA_HOME=~/.asdf/plugins/java/set-java-home.bash
+export JAVA_HOME;
