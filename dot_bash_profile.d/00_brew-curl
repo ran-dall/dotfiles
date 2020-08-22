@@ -1,0 +1,4 @@
+# cURL Fix - https://github.com/Homebrew/brew/issues/7667#issuecomment-636457856
+export HOMEBREW_FORCE_BREWED_CURL=1
+
+export PATH="/usr/local/opt/curl/bin:$PATH"
