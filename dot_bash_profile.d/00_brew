@@ -19,7 +19,8 @@ export HOMEBREW_BREWFILE="$HOME"/.dotfile/Brewfile
 [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 # Homebrew - Command Not Found - Reproduces Ubuntu’s command-not-found for Homebrew users on macOS.
-# https://github.com/Homebrew/homebrew-command-not-found
-if brew command command-not-found-init > /dev/null; then
-    eval "$(brew command-not-found-init)"
+# https://github.com/Homebrew/homebrew-command-not-found#install
+HB_CNF_HANDLER="$(brew --prefix)/Homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+if [ -f "$HB_CNF_HANDLER" ]; then
+source "$HB_CNF_HANDLER";
 fi
